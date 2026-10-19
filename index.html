@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Política de privacidade do jogo Mary &amp; Poly para iPhone, iPad e Apple TV.">
+<title>Privacidade Mary &amp; Poly</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  /* Layout: uma coluna de leitura (~65 caracteres), cabeçalho com faixa de céu e chão de grama, como o jogo. */
+  :root {
+    --bg: #f6f9fc;
+    --paper: #ffffff;
+    --ink: #1f2a44;
+    --muted: #5a6680;
+    --sky: #4fa3ee;
+    --grass: #4cae4f;
+    --dirt: #8a5a33;
+    --mary: #e0384c;
+    --poly: #3866e6;
+    --line: #dde5ef;
+    --chip: #eaf5ea;
+    --font-display: "Lilita One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+    --font-body: "Nunito", ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+    color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10172a; --paper: #172038; --ink: #e8eef8; --muted: #a2afc6;
+      --sky: #2c5d93; --grass: #3e8f42; --dirt: #5e3d24; --mary: #ff6b7c; --poly: #7d9cff;
+      --line: #263254; --chip: #1d3424; color-scheme: dark;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.65 var(--font-body);
+  }
+
+  .hero {
+    background: linear-gradient(var(--sky), color-mix(in srgb, var(--sky) 55%, var(--bg)));
+    border-bottom: 10px solid var(--grass);
+    box-shadow: 0 14px 0 var(--dirt);
+    margin-bottom: 14px;
+  }
+  .hero-inner, main, footer {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .hero-inner { padding-block: 2.5rem 2rem; }
+  .eyebrow {
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    line-height: 1.05;
+    color: #fff;
+    margin: 0;
+    text-wrap: balance;
+    text-shadow: 3px 3px 0 rgba(20, 30, 70, 0.35);
+  }
+  h1 .mary { color: #ffe1e5; }
+  h1 .poly { color: #e3eaff; }
+  .updated { color: #fff; margin: 0.8rem 0 0; font-weight: 600; }
+
+  main { padding-block: 2.2rem 1rem; display: grid; gap: 2rem; }
+
+  .summary {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.3rem 1.4rem;
+  }
+  .summary h2 { margin-top: 0; }
+  .facts { list-style: none; padding: 0; margin: 0.6rem 0 0; display: grid; gap: 0.5rem; }
+  .facts li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    align-items: baseline;
+  }
+  .tick {
+    display: inline-grid;
+    place-items: center;
+    width: 1.35rem; height: 1.35rem;
+    border-radius: 50%;
+    background: var(--chip);
+    color: var(--grass);
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+
+  section { min-width: 0; }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+  }
+  p { margin: 0 0 0.8rem; }
+  strong { font-weight: 800; }
+  .muted { color: var(--muted); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+  th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  th { font-weight: 800; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+
+  footer { padding-block: 1rem 2.5rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+
+  a { color: var(--poly); }
+  a:focus-visible { outline: 3px solid var(--poly); outline-offset: 2px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Política de Privacidade</p>
+    <h1><span class="mary">Mary</span> &amp; <span class="poly">Poly</span></h1>
+    <p class="updated">Vigente desde 19 de outubro de 2026 · iPhone, iPad e Apple TV</p>
+  </div>
+</header>
+
+<main>
+  <div class="summary">
+    <h2>Resumo</h2>
+    <p>Mary &amp; Poly é um jogo que funciona inteiramente no seu aparelho. Nós não coletamos, não vendemos e não compartilhamos nenhum dado seu.</p>
+    <ul class="facts">
+      <li><span class="tick" aria-hidden="true">✓</span><span>Sem conta, cadastro ou login.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span>Sem anúncios, rastreamento ou ferramentas de análise.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span>O jogo não se conecta à internet.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span>Sem compras com dinheiro real: a loja usa só moedas ganhas jogando.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span>Seu progresso fica salvo apenas no próprio aparelho.</span></li>
+    </ul>
+  </div>
+
+  <section>
+    <h2>Quem somos</h2>
+    <p>Mary &amp; Poly é desenvolvido por Rinaldo Santos Jr, desenvolvedor individual responsável pelo app na App Store. Esta política explica como o jogo trata informações, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e as regras da Apple.</p>
+  </section>
+
+  <section>
+    <h2>O que fica guardado no seu aparelho</h2>
+    <p>Para você continuar de onde parou, o jogo salva estas informações localmente, no armazenamento do próprio app. Elas nunca são enviadas para nós nem para terceiros:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Informação</th><th>Para quê</th></tr></thead>
+        <tbody>
+          <tr><td>Fases concluídas, pontuação, gemas e recordes</td><td>Liberar mundos e mostrar seu progresso</td></tr>
+          <tr><td>Moedas da carteira e itens da loja</td><td>Manter o que você comprou com moedas do jogo</td></tr>
+          <tr><td>Estatísticas e conquistas</td><td>Mostrar as telas de Estatísticas e Conquistas</td></tr>
+          <tr><td>Configurações (som, música, pulo duplo, controles de toque, personagem escolhida)</td><td>Lembrar suas preferências</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:0.8rem">Nada disso identifica você. Para apagar tudo, use <strong>Configurações → Apagar progresso</strong> dentro do jogo ou remova o app do aparelho.</p>
+  </section>
+
+  <section>
+    <h2>Controles de jogo</h2>
+    <p>Na Apple TV e no iPhone, o jogo lê os botões do Siri Remote e de controles Bluetooth (como DualSense, Xbox e MFi) por meio do sistema da Apple, apenas para movimentar as personagens. Essas informações são usadas na hora e não ficam guardadas.</p>
+  </section>
+
+  <section>
+    <h2>Crianças</h2>
+    <p>Mary &amp; Poly é indicado para todas as idades. Como o jogo não coleta nenhum dado pessoal, ele não coleta dados de crianças. Não há chat, perfis públicos nem links para fora do app.</p>
+  </section>
+
+  <section>
+    <h2>Serviços da Apple</h2>
+    <p>A Apple pode tratar informações quando você baixa o jogo pela App Store ou participa de testes pelo TestFlight (por exemplo, relatórios de falhas e comentários que você decide enviar). Esse tratamento segue a <a href="https://www.apple.com/br/legal/privacy/" rel="noopener">Política de Privacidade da Apple</a>; nós não recebemos dados que identifiquem você.</p>
+  </section>
+
+  <section>
+    <h2>Seus direitos</h2>
+    <p>A LGPD garante a você direitos como saber quais dados são tratados e pedir sua eliminação. Como o jogo não envia nenhum dado para fora do aparelho, você mesmo tem controle total: apague o progresso no jogo ou desinstale o app a qualquer momento.</p>
+  </section>
+
+  <section>
+    <h2>Mudanças nesta política</h2>
+    <p>Se uma versão futura do jogo passar a usar algum recurso que envolva dados (por exemplo, salvar o progresso no iCloud ou placares online), esta página será atualizada antes, com a nova data de vigência no topo.</p>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>Dúvidas sobre esta política podem ser enviadas ao desenvolvedor, Rinaldo Santos Jr, pelos canais de suporte indicados na página do Mary &amp; Poly na App Store.</p>
+  </section>
+</main>
+
+<footer>
+  Mary &amp; Poly · Política de Privacidade · Vigente desde 19/10/2026
+</footer>
+</body>
+</html>
